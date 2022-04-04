@@ -1,7 +1,7 @@
 import { countFlip, flipACoin } from "./modules/coin.mjs";
 import minimist from "minimist";
 
-let argv = minimist(process.argv.slice(2));
+const argv = minimist(process.argv.slice(2));
 var predict = argv["call"];
 if(predict == null){
     console.error("Error: no input.")
