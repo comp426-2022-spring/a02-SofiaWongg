@@ -1,19 +1,19 @@
-import{coinFlips} from './modules/coinFlips.mjs'
+import{countFlips, coinFlips} from './modules/coinFlips.mjs'
 import minimist from "minimist";
+import {createRequire} from 'module';
 
-var minFlipNum = 1;
+var require = createRequire(import.meta.url);
+let argv = minimist(process.argv.slice(2));
+let number = argv.number;
+var flips;
 
-if(process.argv.length > 2 ){
-    let argv = minimist(process.argv.slice(2));
-    number=argv["number"]
-}
-
-if(number > minFlipNum){
+if(number != null){
     flips = coinFlips(number);
 }
-else{
-    flips = minFlipNum;
+else {
+    flips = coinFlips(1);
+    
+    // console.log(countFlips(flips));
 }
-
 console.log(flips);
 console.log(countFlips(flips));

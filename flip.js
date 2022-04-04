@@ -3,5 +3,6 @@ import { coinFlip} from './modules/coin.mjs';
 
 
 // Call the coinFlip function and put the return into STDOUT
-var STDOUT=coinFlip();
-console.log(STDOUT);
+console.log(coinFlip());
+
+
