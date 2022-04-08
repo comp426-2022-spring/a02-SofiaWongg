@@ -98,7 +98,7 @@ export function countFlips(array) {
  * returns: { call: 'tails', flip: 'heads', result: 'lose' }
  */
 
-function flipACoin(call) {
+export function flipACoin(call) {
   let flipCall = {call: call, flip: coinFlip(), result: ''};
   if(flipCall.call === flipCall.flip){
     flipCall.result = 'win';
@@ -114,4 +114,3 @@ function flipACoin(call) {
  * 
  * Export all of your named functions
 */
-export{coinFlip, coinFlips, countFlips, flipACoin};
