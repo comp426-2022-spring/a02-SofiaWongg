@@ -1,4 +1,4 @@
-import{countFlips, coinFlips} from './modules/coinFlips.mjs'
+import{countFlips, coinFlips} from './modules/coin.mjs'
 import minimist from "minimist";
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
