@@ -14,7 +14,7 @@
  * 
  */
 
-function coinFlip() {
+export function coinFlip() {
   if(Math.random() < 0.5){
     return 'heads'
   }
@@ -42,7 +42,7 @@ function coinFlip() {
     ]
  */
 
-function coinFlips(flips) {
+export function coinFlips(flips) {
   const flipArray = []
   for(let i = 0; i<flips; i++){
     flipArray[i] = coinFlip()
@@ -63,7 +63,7 @@ function coinFlips(flips) {
  * @returns {{ heads: number, tails: number }}
  */
 
-function countFlips(array) {
+export function countFlips(array) {
   var h = 0;
   var t = 0;
   for(let i = 0; i<array.length; i++){
