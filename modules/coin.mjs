@@ -14,6 +14,13 @@
  * 
  */
 
+ import { createRequire } from 'module';
+ const require = createRequire(import.meta.url);
+
+ 
+// sibling-module.js is a CommonJS module.
+const siblingModule = require('./sibling-module');
+
 export function coinFlip() {
   if(Math.random() < 0.5){
     return 'heads'
