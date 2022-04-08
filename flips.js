@@ -4,9 +4,6 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 
 
-// sibling-module.js is a CommonJS module.
-const siblingModule = require('./sibling-module');
-
 const args = minimist(process.argv.slice(2))
 args['number']
 const num = args.number || 1
