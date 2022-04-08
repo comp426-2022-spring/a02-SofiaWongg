@@ -1,5 +1,8 @@
-import { countFlip, flipACoin } from "./modules/coin.mjs";
+import { countFlips, flipACoin } from "./modules/coin.mjs";
 import minimist from "minimist";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const argv = minimist(process.argv.slice(2));
 var predict = argv["call"];
