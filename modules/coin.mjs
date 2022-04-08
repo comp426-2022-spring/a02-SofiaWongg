@@ -18,12 +18,8 @@
  const require = createRequire(import.meta.url);
 
 export function coinFlip() {
-  if(Math.random() < 0.5){
-    return 'heads'
-  }
-  else{
-    return 'tails'
-  }
+  var x = Math.round(Math.random());
+  if (x < 1) {return "heads";} else {return "tails";}
 }
 
 /** Multiple coin flips
